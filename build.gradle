@@ -1,0 +1,31 @@
+apply plugin: 'java'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    // logging log4j2
+    compile group: 'org.slf4j', name: 'slf4j-api', version: '+'
+    compile group: 'org.slf4j', name: 'slf4j-nop', version: '+'
+    compile group: 'org.apache.logging.log4j', name: 'log4j-core', version: '+'
+
+    compile group: 'com.fasterxml.jackson.core', name: 'jackson-databind', version: '+'
+    compile fileTree(dir: 'libs', include: '*.jar')
+
+    // junit & selenium
+    testCompile group: 'junit', name: 'junit', version: '+'
+    testCompile group: 'org.seleniumhq.selenium', name: 'selenium-java', version: '+'
+    testCompile group: 'org.seleniumhq.selenium', name: 'selenium-server', version: '+'
+    testCompile group: 'org.seleniumhq.selenium', name: 'selenium-chrome-driver', version: '+'
+}
+
+// タスクの同時実行数
+test.maxParallelForks = 6
+
+// Javaコンパイル時の文字コード指定（特にWin環境で必須）
+tasks.withType(JavaCompile){
+    options.encoding = 'UTF-8'
+}
