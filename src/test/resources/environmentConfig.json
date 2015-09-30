@@ -1,6 +1,4 @@
 {
-//  "execMode": "RUN_TEST",
-
   "hubHost": "192.168.99.100",
   "hubPort": 4444
 }

@@ -1,5 +1,9 @@
 [
   {
+    "platform": "MAC",
+    "browserName": "chrome"
+  },
+  {
     "platform": "LINUX",
     "browserName": "chrome"
   }
