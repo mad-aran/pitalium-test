@@ -1,6 +1,6 @@
 [
   {
     "platform": "MAC",
-    "browserName": "firefox"
+    "browserName": "chrome"
   }
 ]
